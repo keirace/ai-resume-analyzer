@@ -17,7 +17,6 @@ const auth = () => {
 
     useEffect(() => {
         if (auth.isAuthenticated) {
-            console.log("Authenticated, redirecting to:", next || '/');
             navigate(next); // Redirect to the 'next' path after login
         }
     }, [auth.isAuthenticated, navigate, next]);
