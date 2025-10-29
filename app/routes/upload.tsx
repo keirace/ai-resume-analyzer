@@ -80,7 +80,9 @@ const upload = () => {
 
         setIsProcessing(false);
         setStatusMessage("Resume analyzed successfully!");
+        console.log("Resume data:", data);
 
+        navigate(`/resume/${uuid}`);
     }
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
