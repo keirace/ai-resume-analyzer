@@ -56,3 +56,8 @@ interface Feedback {
 		}[];
 	};
 }
+
+interface Suggestion {
+    type: "good" | "improve";
+    tip: string;
+}

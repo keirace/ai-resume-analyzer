@@ -87,7 +87,6 @@ const resume = () => {
                         <Summary feedback={feedback} />
                         <ATS score={feedback.ATS.score || 0} suggestions={feedback.ATS.tips || []} />
                         <Details feedback={feedback} />
-                        {/* {feedback.overallScore} */}
                     </div>) : (<img src='/images/resume-scan-2.gif' alt='loading' className='w-full' />)}
                 </section>
             </div>

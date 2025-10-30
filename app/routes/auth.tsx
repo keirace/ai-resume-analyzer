@@ -27,7 +27,7 @@ const auth = () => {
                 <section className="flex flex-col gap-8 bg-white rounded-2xl p-10">
                     <div className="flex flex-col items-center gap-2 text-center">
                         <h1>Welcome</h1>
-                        <h2>Log in to your account to continue your job journey</h2>
+                        <p className="text-2xl">Log in to your account to continue your job journey</p>
                     </div>
                     <div className="flex flex-col items-center">
                         {isLoading ? (<button className="auth-button animate-pulse">Signing you in...</button>) : (
