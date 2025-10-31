@@ -22,6 +22,7 @@ const resume = () => {
     const [resumeUrl, setResumeUrl] = React.useState<string | null>(null);
     const [imageUrl, setImageUrl] = React.useState<string | null>(null);
     const [feedback, setFeedback] = React.useState<Feedback | null>(null);
+    const [statusMessage, setStatusMessage] = React.useState<string>("");
 
     const navigate = useNavigate();
 
@@ -37,7 +38,10 @@ const resume = () => {
         const fetchResumeDetails = async (resumeId: string) => {
             // Simulate an API call
             const resume = await kv.get(`resume:${resumeId}`);
-            if (!resume) return;
+            if (!resume) {
+                setStatusMessage("Resume not found");
+                return;
+            }
 
             const data = JSON.parse(resume);
 
@@ -79,7 +83,7 @@ const resume = () => {
                         </div>
                     )}
                 </section>
-                
+
                 {/* Feedback Section */}
                 <section className="feedback-section">
                     <h2 className='text-4xl text-black! font-bold'>Resume Review</h2>
@@ -87,7 +91,7 @@ const resume = () => {
                         <Summary feedback={feedback} />
                         <ATS score={feedback.ATS.score || 0} suggestions={feedback.ATS.tips || []} />
                         <Details feedback={feedback} />
-                    </div>) : (<img src='/images/resume-scan-2.gif' alt='loading' className='w-full' />)}
+                    </div>) : (statusMessage ? <p className='text-red-500'>{statusMessage}</p> : <img src='/images/resume-scan-2.gif' alt='loading' className='w-full' />)}
                 </section>
             </div>
         </main>
