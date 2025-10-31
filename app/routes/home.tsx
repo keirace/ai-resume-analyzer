@@ -45,7 +45,7 @@ export default function Home() {
       <div className="page-heading py-16">
         <h1>Track your job applications with ease</h1>
         {!loadingResumes && resumes.length === 0 ? (
-          <h2>No resumes found. Upload your resume to get started.</h2>
+          <h2 className="pt-6">No resumes found. Upload your resume to get started.</h2>
         ) : (
           <h2>Review your applications and get insights with AI-powered feedback</h2>
         )}
@@ -66,7 +66,7 @@ export default function Home() {
 
       {!loadingResumes && resumes?.length === 0 && (
         <div className="no-resumes flex flex-col items-center justify-center gap-4 mt-10">
-          <Link to="/upload" className="upload-resume-button">Upload Your First Resume</Link>
+          <Link to="/upload" className="upload-resume-button primary-button">Upload Your First Resume</Link>
           {/* <img src="/images/empty-resume.svg" alt="No resumes" className="w-[150px]" />
           <p className="text-gray-600 text-lg">You haven't uploaded any resumes yet.</p> */}
         </div>

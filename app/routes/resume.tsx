@@ -76,9 +76,9 @@ const resume = () => {
                 {/* Resume Preview */}
                 <section className="feedback-section bg-[url('/images/bg-small.svg')] bg-cover sticky top-0 h-screen items-center justify-center">
                     {imageUrl && resumeUrl && (
-                        <div className="animate-in fade-in duration-1000 gradient-border max-sm:m-0 h-[90%] max-w-xl:h-fit w-fit[90%]">
+                        <div className="animate-in fade-in duration-1000 gradient-border max-sm:m-0 max-sm:h-[80%] h-[90%] max-w-xl:h-fit w-fit[90%]">
                             <a href={resumeUrl} target="_blank" rel="noopener noreferrer">
-                                <img src={imageUrl} alt="Resume Preview" className='w-full h-full object-contain rounded-2xl' title='resume' />
+                                <img src={imageUrl} alt="Resume Preview" className='w-full h-full object-contain rounded-2xl ' title='resume' />
                             </a>
                         </div>
                     )}

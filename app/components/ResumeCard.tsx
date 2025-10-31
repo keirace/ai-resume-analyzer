@@ -20,7 +20,7 @@ const ResumeCard = ({ resume }: { resume: Resume }) => {
     }, [resume.imagePath]);
 
     return (
-        <Link to={`/resume/${resume.id}`} className="resume-card animate-in fade-in duration-500">
+        <Link to={`/resume/${resume.id}`} className="resume-card animate-in fade-in duration-500 gap-4">
             <div className='resume-card-header flex flex-row justify-between items-center'>
                 <div className='flex flex-col gap-2'>
                     {resume.companyName && <h2 className='text-black! font-bold wrap-break-word'>{resume.companyName}</h2>}
